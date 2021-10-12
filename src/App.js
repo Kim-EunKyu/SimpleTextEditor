@@ -39,7 +39,7 @@ function App() {
     `<p>Hello <b>W<i>o<u>rld</u>ㅇ</i>ㅇ</b> !</p><p>Paragraph 2</p>`
   );
   const [optionState, setOptionState] = useState([false, false, false, false]);
-  const [keyList, setKeyList] = useState("initial");
+  // const [keyList, setKeyList] = useState("initial");
   let keysPressed = {};
 
   const optionList = ["B", "I", "U", "STRIKE"];
@@ -112,7 +112,7 @@ function App() {
   };
 
   const onKeyUpText = (e) => {
-    console.log(keyList);
+    // console.log(keyList);
     delete keysPressed[e.key];
   };
 
@@ -168,7 +168,7 @@ function App() {
         <EditButton cmd="superscript" isClicked={optionState[3]}>
           <FontAwesomeIcon icon={faSuperscript} />
         </EditButton>
-        <button onClick={() => alert(keyList)}>확인</button>
+        {/* <button onClick={() => alert(keyList)}>확인</button> */}
       </EditorBtns>
 
       <StyledContentEditable
